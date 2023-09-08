@@ -1,13 +1,21 @@
-def es_numero(valor):
-    try:
-        float(valor)
-        return True
-    except ValueError:
-        return False
-
 def es_entero_positivo(valor):
     try:
-        entero = int(valor)
-        return entero > 0
+        if int(valor) >= 0:
+            return valor
     except ValueError:
-        return False
+        print("\n!Intentelo Nuevamente¡ - No es entero Positivo\n")
+        valor = input("Ingrese numero: ")
+        return es_entero_positivo(valor)
+
+def es_numero(valor):
+    try:
+        return float(valor)
+    except ValueError:
+        print("\n!Intentelo Nuevamente¡ - No es numero\n")
+        valor = input("Ingrese numero: ")
+        return es_numero()
+
+def input_data_basic():
+    a = es_numero(input("Ingrese el primer número: "))
+    b = es_numero(input("Ingrese el segundo número: "))
+    return a,b

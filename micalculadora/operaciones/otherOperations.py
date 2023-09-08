@@ -1,22 +1,23 @@
 # mayor, menor,igual, diferente, serie Fibonacci, factorial, mínimo común múltiplo máximo común divisor
 
-def mayor(*notas):
-    if len(notas) == 0:
-        return None
-    mayor = 0
-    for i in len(notas):
-        if i >= mayor:
-            mayor = i
-    return mayor
+def mayor(notas):
+  if len(notas) == 0:
+    return None
+  mayor = 0
+  for i in notas:
+    if mayor <= int(i):
+      mayor = i
+  print(f'El mayor es {mayor}')
+  return mayor
 
-def menor(*notas):
+def menor(notas):
     if len(notas) == 0:
         return None
-    
     menor = notas[0]
     for nota in notas:
         if nota < menor:
             menor = nota
+    print(f'El menor es {menor}')
     return menor
 
 def calcular_mcd(num1, num2):
@@ -74,3 +75,4 @@ def potencia(base, exponente):
         return resultado
     except Exception as e:
         return f"Error: {e}"
+    

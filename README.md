@@ -17,6 +17,7 @@ pip install -r requirements.txt
 ```
 ## Estructura
 
+```
 mi_calculadora/
 ├── LICENSE
 ├── README.md
@@ -37,9 +38,8 @@ mi_calculadora/
     ├── validaciones.py
     └── test/
         ├── __init__.py
-        ├── prueba.py
         └── test_operaciones.py
-
+```
 ## Funcionalidades
 
 La calculadora ofrece una amplia gama de funcionalidades, incluyendo:
